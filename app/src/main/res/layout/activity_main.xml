@@ -8,12 +8,12 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginBottom="100dp"
         android:autoText="false"
         android:background="#2196F3"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:lineSpacingExtra="8sp"
         android:text="PROJETO MIKAEL 02"
         android:textAlignment="center"
@@ -36,17 +36,20 @@
         android:ems="10"
         android:inputType="text"
         android:textAlignment="center"
+        android:hint="Insira o texto aqui"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="0dp"
         android:layout_height="25dp"
         android:layout_marginTop="12dp"
+        android:gravity="center"
         android:text="Caracteres"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -61,7 +64,9 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:background="#A4C2DA"
+        android:gravity="center"
         android:textAlignment="center"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -72,6 +77,7 @@
         android:id="@+id/textView1"
         android:layout_width="0dp"
         android:layout_height="25dp"
+        android:gravity="center"
         android:text="Digite o Texto"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -82,37 +88,42 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/btnLimpar"
+        android:id="@+id/btnCalcular"
         android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="20dp"
-        android:background="#2196F3"
-        android:backgroundTint="#2196F3"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="212dp"
+        android:background="#6750A3"
+        android:backgroundTint="#6750A3"
         android:text="CALCULAR"
         app:layout_constraintBottom_toTopOf="@+id/btnLimpar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvLabel1" />
+
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#6750A3"
+        android:backgroundTint="#6750A3"
+        android:text="LIMPAR"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnFinalizar"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
         android:background="#673AB7"
         android:text="FINALIZAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnLimpar"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="20dp"
-        android:background="#673AB7"
-        android:text="LIMPAR"
-        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

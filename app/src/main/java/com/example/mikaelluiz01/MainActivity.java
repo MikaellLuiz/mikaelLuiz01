@@ -15,12 +15,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnCalcular = (Button)this.findViewById(R.id.btnLimpar);
-        Button btnLimpar = (Button)this.findViewById(R.id.btnLimpar);
+        Button btnCalcular = (Button)this.findViewById(R.id.btnCalcular);
+        Button btnLimpar = (Button)this.findViewById(R.id.btnCalcular);
 
         EditText insertText = (EditText)this.findViewById(R.id.insertText);
         TextView txvLabel1 = (TextView)this.findViewById((R.id.txvLabel1));
-        TextView txvLabe2 = (TextView)this.findViewById((R.id.txvLabel2));
+        btnLimpar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                insertText.setText("");
+                txvLabel1.setText("");
+
+            }
+        });
+        btnCalcular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String texto = insertText.getText().toString();
+                int tamanho = texto.length();
+                txvLabel1.setText(String.valueOf(tamanho).toString());
+            }
+        });
 
         Button btnFinalizar = (Button) this.findViewById(R.id.btnFinalizar);
         btnFinalizar.setOnClickListener(new View.OnClickListener() {
